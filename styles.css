@@ -1,82 +1,15 @@
-/* 重置樣式 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* 自訂樣式，覆蓋 Bootstrap 預設 */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
 
-/* 導航欄 */
-nav {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-bottom: 1px solid #e7e7e7;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end; /* 假設導航欄在右側 */
-  align-items: center;
-}
-
-nav li {
-  margin-left: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #007bff; /* 藍色 hover 效果 */
-}
-
-/* 首頁英雄區（背景圖片和文字） */
 .hero {
-  height: 100vh; /* 滿屏高度 */
-  background: linear-gradient(to right, #87ceeb 50%, #f0f0f0 50%); /* 模擬左藍右灰的漸層 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
 }
 
-.hero-content {
-  text-align: center;
-  color: white;
-  z-index: 1; /* 確保文字在圖片上方 */
-  padding: 2rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: normal;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* 背景圖片（假設使用 CSS 背景圖片） */
 .hero::before {
   content: '';
   position: absolute;
@@ -99,35 +32,16 @@ nav a:hover {
   z-index: 0;
 }
 
-/* 頁腳 */
-footer {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  text-align: center;
-  color: #666;
-  border-top: 1px solid #e7e7e7;
-}
-
-footer p {
-  font-size: 0.9rem;
+.page {
+  display: none;
 }
 
 .footer-icon {
   font-size: 1.5rem;
-  margin-top: 0.5rem;
 }
 
-/* 響應式設計 */
+/* 響應式調整 */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav li {
-    margin: 0.5rem 0;
-  }
-
   .hero {
     height: auto;
     padding: 2rem 0;

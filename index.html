@@ -3,56 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的業務網站</title>
+  <title>海風遊艇</title>
+  <!-- 引入本地的 Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- 自訂樣式（覆蓋 Bootstrap 預設樣式） -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- 導航欄 -->
-  <nav>
-    <ul>
-      <li><a href="#home">首頁</a></li>
-      <li><a href="#services">服務</a></li>
-      <li><a href="#about">關於我們</a></li>
-      <li><a href="#contact">聯繫我們</a></li>
-    </ul>
+  <!-- 導航欄（Bootstrap Navbar） -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">海風遊艇</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">服務</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">聯繫我們</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <!-- 分頁內容 -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>河輪主題觀光船</h1>
-      <h2>大河之鑽皇后號</h2>
-      <p>位於河口1號碼頭，提供河川美景巡航旅遊體驗，帶您探索城市風光與自然美景！</p>
+  <!-- 首頁內容（英雄區） -->
+  <section id="home" class="page">
+    <div class="hero d-flex align-items-center justify-content-center text-white" style="height: 100vh; background: linear-gradient(to right, #87ceeb 50%, #f0f0f0 50%)">
+      <div class="hero-content text-center">
+        <h1 class="display-4">河輪主題觀光船</h1>
+        <h2 class="display-5">大河之鑽皇后號</h2>
+        <p class="lead">位於河口1號碼頭，提供河川美景巡航旅遊體驗，帶您探索城市風光與自然美景！</p>
+      </div>
     </div>
   </section>
 
+  <!-- 服務內容 -->
+  <section id="services" class="page container py-5">
+    <h2 class="text-center mb-4">我們的服務</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">專業諮詢</h5>
+            <p class="card-text">提供河輪旅遊的專業建議，確保您的旅程舒適與安全。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">產品推廣</h5>
+            <p class="card-text">推廣我們的特色遊輪體驗，適合企業團建或家庭出遊。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">技術支援</h5>
+            <p class="card-text">提供遊輪技術與行程支援，確保旅遊無憂。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 關於我們 -->
+  <section id="about" class="page container py-5">
+    <h2 class="text-center mb-4">關於我們</h2>
+    <p class="lead">我們是一支致力於客戶成功的團隊，成立於 2020 年，專注提供高品質的河輪旅遊體驗。</p>
+  </section>
+
+  <!-- 聯繫我們 -->
+  <section id="contact" class="page container py-5">
+    <h2 class="text-center mb-4">聯繫我們</h2>
+    <p class="lead">有任何問題？請透過以下方式聯繫我們：</p>
+    <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" class="btn btn-success btn-lg d-block mx-auto" style="max-width: 200px;">LINE 聯繫</a>
+  </section>
+
   <!-- 頁腳 -->
-  <footer>
-    <p>環保 · 相惜</p>
-    <div class="footer-icon">🌱</div>
-  </footer>
-  <div id="services" class="page">
-    <h1>我們的服務</h1>
-    <ul>
-      <li>服務 1：專業諮詢</li>
-      <li>服務 2：產品推廣</li>
-      <li>服務 3：技術支援</li>
-    </ul>
-  </div>
-  <div id="about" class="page">
-    <h1>關於我們</h1>
-    <p>我們是一支致力於客戶成功的團隊，成立於 2020 年。</p>
-  </div>
-  <div id="contact" class="page">
-    <h1>聯繫我們</h1>
-    <p>有任何問題？請透過以下方式聯繫我們：</p>
-    <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" class="contact-btn">LINE 聯繫</a>
-  </div>
-  <footer>
-    <p>環保 · 相惜</p>
-    <div class="footer-icon">🌱</div>
+  <footer class="bg-light text-center py-3 mt-5">
+    <p class="mb-0">環保 · 相惜</p>
+    <span class="footer-icon">🌱</span>
   </footer>
 
+  <!-- 引入本地的 Bootstrap JS 和自訂 JavaScript -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
