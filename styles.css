@@ -1,40 +1,151 @@
 /* 重置樣式 */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* 導航欄 */
+nav {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  padding: 10px 0;
-  margin: 0;
+  justify-content: flex-end; /* 假設導航欄在右側 */
+  align-items: center;
 }
+
+nav li {
+  margin-left: 2rem;
+}
+
 nav a {
-  color: white;
   text-decoration: none;
-  padding: 10px;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
+
 nav a:hover {
-  background-color: #555;
+  color: #007bff; /* 藍色 hover 效果 */
 }
 
-/* 分頁內容 */
-.page { display: none; }
-.page:target { display: block; }
+/* 首頁英雄區（背景圖片和文字） */
+.hero {
+  height: 100vh; /* 滿屏高度 */
+  background: linear-gradient(to right, #87ceeb 50%, #f0f0f0 50%); /* 模擬左藍右灰的漸層 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
 
-/* 聯繫按鈕 */
-.contact-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #28a745;
+.hero-content {
+  text-align: center;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  z-index: 1; /* 確保文字在圖片上方 */
+  padding: 2rem;
 }
-.contact-btn:hover {
-  background-color: #218838;
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 背景圖片（假設使用 CSS 背景圖片） */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: url('boat.jpg') no-repeat center center/cover; /* 左側遊輪圖片 */
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url('bridge.jpg') no-repeat center center/cover; /* 右側橋梁和湖景圖片 */
+  z-index: 0;
+}
+
+/* 頁腳 */
+footer {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  border-top: 1px solid #e7e7e7;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
