@@ -1,46 +1,40 @@
 /* 重置樣式 */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* 導航欄 */
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 10px 0;
-    margin: 0;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-  nav a:hover {
-    background-color: #555;
-  }
-  
-  /* 分頁內容 */
-  .page {
-    display: none;
-    padding: 20px;
-    text-align: center;
-  }
-  .page:target {
-    display: block;
-  }
-  
-  /* 聯繫按鈕 */
-  .contact-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  .contact-btn:hover {
-    background-color: #218838;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 導航欄 */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 0;
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+nav a:hover {
+  background-color: #555;
+}
+
+/* 分頁內容 */
+.page { display: none; }
+.page:target { display: block; }
+
+/* 聯繫按鈕 */
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.contact-btn:hover {
+  background-color: #218838;
+}
