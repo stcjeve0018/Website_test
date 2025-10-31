@@ -1,65 +1,39 @@
-/* 自訂樣式，覆蓋 Bootstrap 預設 */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
+.lottery-card {
+  border: none;
+  border-radius: 1rem;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: url('boat.jpg') no-repeat center center/cover; /* 左側遊輪圖片 */
-  z-index: 0;
+.lottery-result {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(76, 175, 80, 0.1));
+  border-radius: 1rem;
+  padding: 2rem 1rem;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: url('bridge.jpg') no-repeat center center/cover; /* 右側橋梁和湖景圖片 */
-  z-index: 0;
+.winner-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2196f3;
 }
 
-.page {
-  display: none;
+.lottery-history .list-group-item {
+  border: none;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.footer-icon {
-  font-size: 1.5rem;
+.lottery-history .list-group-item:last-child {
+  margin-bottom: 0;
 }
 
-/* 響應式調整 */
 @media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 2rem 0;
-  }
-
-  .hero-content {
-    padding: 1rem;
-  }
-
-  .hero h1 {
+  .winner-name {
     font-size: 2rem;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
   }
 }
