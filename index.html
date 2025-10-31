@@ -21,6 +21,7 @@
           <li class="nav-item"><a class="nav-link" href="#services">服務</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">聯繫我們</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lottery">電子抽獎</a></li>
         </ul>
       </div>
     </div>
@@ -36,7 +37,65 @@
     </div>
   </section>
 
-  <!-- 其他分頁保持不變 -->
+  <section id="lottery" class="page py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow lottery-card">
+            <div class="card-body">
+              <h2 class="card-title text-center mb-4">電子抽獎系統</h2>
+              <p class="text-muted">請將參與抽獎的名單以逗號或換行分隔輸入，並設定要抽出的獎項名稱。</p>
+              <form id="lottery-form" novalidate>
+                <div class="mb-3">
+                  <label for="participants" class="form-label">參與者名單</label>
+                  <textarea id="participants" class="form-control" rows="5" placeholder="例如：小明, 小美, 小華 或一行一位" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="prize" class="form-label">獎項名稱</label>
+                  <input type="text" id="prize" class="form-control" placeholder="例如：雙人郵輪晚宴" required>
+                </div>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                  <button type="reset" class="btn btn-outline-secondary">清除</button>
+                  <button type="submit" class="btn btn-primary" id="draw-button">開始抽獎</button>
+                </div>
+              </form>
+              <div class="alert mt-3 d-none" role="alert" id="lottery-message"></div>
+              <div class="lottery-result text-center mt-4">
+                <p class="text-uppercase text-muted mb-1">中獎者</p>
+                <div class="winner-name" id="winner-name">尚未抽獎</div>
+                <p class="fs-5 mt-3" id="prize-name"></p>
+              </div>
+              <div class="lottery-history mt-4">
+                <h3 class="h5">抽獎紀錄</h3>
+                <ul class="list-group" id="history-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="page py-5">
+    <div class="container">
+      <h2 class="mb-4">服務項目</h2>
+      <p>我們提供多元化的主題航程、客製化包船活動與企業團體方案，滿足不同旅客的需求。</p>
+    </div>
+  </section>
+
+  <section id="about" class="page py-5">
+    <div class="container">
+      <h2 class="mb-4">關於我們</h2>
+      <p>大河之鑽皇后號專注於永續旅遊與高品質服務，邀請旅客一同感受河川的脈動與城市的故事。</p>
+    </div>
+  </section>
+
+  <section id="contact" class="page py-5">
+    <div class="container">
+      <h2 class="mb-4">聯繫我們</h2>
+      <p>如需預約或合作洽詢，歡迎透過 <a href="mailto:info@example.com">info@example.com</a> 與我們聯繫。</p>
+    </div>
+  </section>
 
   <footer class="bg-light text-center py-3 mt-5">
     <p class="mb-0">環保 · 相惜</p>

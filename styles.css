@@ -36,6 +36,34 @@ body {
   display: none;
 }
 
+.lottery-card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.lottery-result {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(76, 175, 80, 0.1));
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+}
+
+.winner-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2196f3;
+}
+
+.lottery-history .list-group-item {
+  border: none;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lottery-history .list-group-item:last-child {
+  margin-bottom: 0;
+}
+
 .footer-icon {
   font-size: 1.5rem;
 }
